@@ -25,6 +25,6 @@ data:extend({
     type = "string-setting",
     name = mod_prefix .. "energy-usage",
     setting_type = "startup", order = "d",
-    default_value = "2.5MW",
+    default_value = "2.5GW",
   },
 })
