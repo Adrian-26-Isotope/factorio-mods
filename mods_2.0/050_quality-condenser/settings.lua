@@ -25,6 +25,12 @@ data:extend({
     type = "string-setting",
     name = mod_prefix .. "energy-usage",
     setting_type = "startup", order = "d",
-    default_value = "2.5GW",
+    default_value = "495MW",
+  },
+    {
+    type = "int-setting",
+    name = mod_prefix .. "recipe-duration",
+    setting_type = "startup", order = "e",
+    default_value = 600,
   },
 })
