@@ -11,7 +11,7 @@ data:extend({
     type = "int-setting",
     name = mod_prefix .. "module-slots",
     setting_type = "startup", order = "b",
-    default_value = 1,
+    default_value = 4,
     allowed_values = {0, 1, 2, 3, 4, 5, 6},
   },
   {

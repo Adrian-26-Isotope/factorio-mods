@@ -14,38 +14,45 @@ notable differences are that mine does not require taking the item out and back 
 
 ### Functionality
 
-It is similar to the recycler, but it returns the item itself instead of their ingredients,
-and instead of a 25% output chance each item's upgrade (or void) chance is that machine's quality.
+The quality condenser uses a probabilistic re-creation system where items are consumed and potentially re-created based on the condenser's quality level:
 
-For example 100 items times 12.5% quality (100 * 0.125 = 12.5), those 12 are guaranteed items,
-if the item count & quality percentage leave a decimal (.5 in this case) that becomes chance based,
-based on how much is left the machine randomly rounds up or down, keeping the average completely fair.
+**Item retention rates (by condenser quality):**
+- **Normal (Common)**: 25% re-created / 75% consumed
+- **Uncommon**: 28% re-created / 72% consumed
+- **Rare**: 33% re-created / 67% consumed
+- **Epic**: 40% re-created / 60% consumed
+- **Legendary**: 50% re-created / 50% consumed
 
-If there is not enough for one guaranteed item the machine will skip that item/quality so you'll always have one.
+Re-created items then roll for quality upgrades based on the quality modules installed in the condenser. Upgrades follow Factorio's normal chaining mechanics, meaning an item can jump multiple quality tiers in a single cycle (e.g., normal → rare).
+
+**Key Features:**
+- Each item has an independent chance to be re-created based on the condenser's quality
+- Re-created items roll for quality upgrades using module effects
+- Quality upgrades can chain through multiple tiers in one cycle
+- Spoilage percentage is preserved on re-created items
+- The condenser only goes idle when its inventory is completely empty
 
 ## Balance
 
-By default the mod is balanced, recyclers have 4 module slots and a 25% output chance,
-the quality condenser has 1 module slot and the output is guaranteed based on quality percentage.
+The quality condenser now uses a quality-dependent probabilistic system that differs from the recycler:
+- Recyclers have 4 module slots and a fixed 25% output chance
+- The quality condenser defaults to 4 module slots and has variable item retention based on its own quality (25%-50%)
+- Higher quality condensers retain more items, making legendary condensers particularly efficient
+- Output is probabilistic rather than guaranteed, adding variability to the process
 
 ### Usage
 
-After researching (which is free) craft and place the device,
-it consists of two parts, the center entity is the crafter in which you can put modules,
-and the outer edge of the selection box will allow access to the container for the items.
-(note that you cannot put items in the machine from the crafter gui, use inserters/loaders)
+After researching (which is free) craft and place the device. It consists of two parts: the center entity is the crafter where you can install modules, and the outer edge of the selection box provides access to the container for items.
+(Note: you cannot put items in the machine from the crafter GUI, use inserters/loaders)
 
-Do not forget to put in quality modules, those are what determine the upgrade chance after all.
+**Quality Modules are Essential:** The quality modules determine the upgrade chance for re-created items. Without quality modules, items will still be consumed and re-created based on the condenser's quality level, but they won't upgrade to higher quality tiers.
 
-Once the machine is full or idle for a few seconds it will start the upgrade cycle process,
-you can leave the result items in to upgrade them more, or extract them for use elsewhere.
+Once the machine has items, it will process them through the consumption/re-creation cycle. You can leave the result items in to process them further, or extract them for use elsewhere. The condenser only goes idle when its inventory is completely empty.
 
-~~In order to limit which quality to upgrade too you can chance the quality of the recipe,
-it will upgrade up to that quality, save for the normal quality which means uncapped.
-(tip: https://mods.factorio.com/mod/change-recipe-quality-without-re-selecting-recipe)~~
-
-Higher qualities of the machine itself are faster and have more upgrade slots,
-note that beyond 100% quality there is no bonus, so you could use speed modules then.
+Higher qualities of the machine itself:
+- Retain more items during each cycle (up to 50% for legendary)
+- Are faster
+- Have more upgrade slots
 
 ### Configurability
 

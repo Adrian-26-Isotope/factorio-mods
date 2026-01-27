@@ -10,7 +10,7 @@ local function new_struct(table, struct)
   return struct
 end
 
-function reset_offering_1(struct)
+function enable_wake_on_input(struct)
   if struct.inserter_1_offering.valid then return end
   -- game.print(string.format("resetting offering 1 for #%d @ %d", struct.id, game.tick))
   struct.inserter_1.held_stack.clear()
