@@ -15,7 +15,8 @@ local get_recreate_probability = {
   [1] = 0.28,  -- uncommon
   [2] = 0.33,  -- rare
   [3] = 0.40,  -- epic
-  [4] = 0.50,  -- legendary
+  [4] = 0.50,  -- unused
+  [5] = 0.50,  -- legendary
 }
 
 -- log(serpent.block(next_quality_name))

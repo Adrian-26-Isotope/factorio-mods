@@ -1,10 +1,10 @@
 {
     "name": "quality-condenser",
-    "title": "Quality condenser",
-    "description": "A recycler that returns the items themselves but a quality higher, success depends on quality modules.",
+    "title": "Quality Condenser",
+    "description": "Adds the Quality Condenser — simplifies the quality upscaling process at the cost of a lot of energy.",
 
-    "version": "2.0.4",
-    "author": "Quezler",
+    "version": "3.0.0",
+    "author": "Quezler",    
     "factorio_version": "2.0",
 
     "quality_required": true,
@@ -15,15 +15,11 @@
     "segmented_units_required": false,
     "expansion_shaders_required": false,
 
-    "dependencies": [
-        "? newsletter-for-mods-made-by-quezler",
-
+    "dependencies": [     
         "base >= 2.0.48",
         "? quality",
         "? space-age",
-
         "beacon-interface",
-
         "(?) QualityPlus"
     ]
 }

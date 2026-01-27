@@ -27,6 +27,8 @@ local crafter_entity = {
   name = mod_name,
   icon = skin.icon,
 
+  factorpedia_description = {"entity-description" .. mod_name},
+
   selection_priority = 51,
   drawing_box_vertical_extension = 1,
   selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
@@ -41,7 +43,7 @@ local crafter_entity = {
   {
     type = "electric",
     usage_priority = "secondary-input",
-    emissions_per_minute = { pollution = 10 }
+    drain = "5MW",
   },
   energy_usage = settings.startup[mod_prefix .. "energy-usage"].value,
 
