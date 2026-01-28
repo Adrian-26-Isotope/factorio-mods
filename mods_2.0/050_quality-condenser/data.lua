@@ -104,12 +104,12 @@ local crafter_recipe = {
   name = mod_name,
   ingredients =
   {
-    {type = "item", name = "iron-plate", amount = 100},
-    {type = "item", name = "iron-gear-wheel", amount = 25},
-    {type = "item", name = "steel-plate", amount = 50},
-    {type = "item", name = "copper-cable", amount = 200},
-    {type = "item", name = "electronic-circuit", amount = 100},
-    {type = "item", name = "advanced-circuit", amount = 50},
+    {type = "item", name = "iron-plate", amount = 1000},
+    {type = "item", name = "iron-gear-wheel", amount = 250},
+    {type = "item", name = "steel-plate", amount = 500},
+    {type = "item", name = "copper-cable", amount = 2000},
+    {type = "item", name = "electronic-circuit", amount = 1000},
+    {type = "item", name = "advanced-circuit", amount = 500},
   },
   results = {{type="item", name=crafter_item.name, amount=1}},
   energy_required = 20,
