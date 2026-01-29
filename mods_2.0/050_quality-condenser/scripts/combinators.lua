@@ -152,6 +152,69 @@ function Combinators.create_for_struct(struct)
     local red_in = struct.inserter_2.get_wire_connector(defines.wire_connector_id.circuit_red, false) --[[@as LuaWireConnector]]
     assert(red_out.connect_to(red_in, false, defines.wire_origin.player))
   end
+
+  -- Decider combinator to detect empty inventory during crafting
+  struct.decider_1 = storage.surface.create_entity{
+    name = "decider-combinator",
+    force = "neutral",
+    position = {0.5 + struct.index, -11.0},
+    direction = defines.direction.north,
+  }
+  assert(struct.decider_1)
+  decider_1_cb = struct.decider_1.get_control_behavior() --[[@as LuaDeciderCombinatorControlBehavior]]
+  decider_1_cb.parameters = {
+    first_signal = {
+      type = "virtual",
+      name = "signal-anything"
+    },
+    second_constant = 0,
+    comparator = "=",
+    output_signal = {
+      type = "virtual",
+      name = "signal-E"
+    },
+    copy_count_from_input = false,
+    first_signal_networks = {
+      red = true,
+      green = false
+    }
+  }
+
+  do -- connect proxy_container_a and entity to decider_1 input
+    local red_out_container = struct.proxy_container_a.get_wire_connector(defines.wire_connector_id.circuit_red, true) --[[@as LuaWireConnector]]
+    local red_out_entity = struct.entity.get_wire_connector(defines.wire_connector_id.circuit_red, false) --[[@as LuaWireConnector]]
+    local red_in = struct.decider_1.get_wire_connector(defines.wire_connector_id.combinator_input_red, false) --[[@as LuaWireConnector]]
+    assert(red_out_container.connect_to(red_in, false, defines.wire_origin.player))
+    assert(red_out_entity.connect_to(red_in, false, defines.wire_origin.player))
+  end
+
+  struct.inserter_3 = storage.surface.create_entity{
+    name = "inserter",
+    force = "neutral",
+    position = {0.5 + struct.index, -13.5},
+    direction = defines.direction.south,
+  }
+  assert(struct.inserter_3)
+  inserter_3_cb = struct.inserter_3.get_or_create_control_behavior() --[[@as LuaInserterControlBehavior]]
+  inserter_3_cb.circuit_enable_disable = true
+  inserter_3_cb.circuit_condition = {
+    first_signal = {
+      type = "virtual",
+      name = "signal-E"
+    },
+    second_signal = {
+      type = "virtual",
+      name = "signal-C"
+    },
+    comparator = "AND",
+    fulfilled = false
+  }
+
+  do
+    local red_out = struct.decider_1.get_wire_connector(defines.wire_connector_id.combinator_output_red, false) --[[@as LuaWireConnector]]
+    local red_in = struct.inserter_3.get_wire_connector(defines.wire_connector_id.circuit_red, false) --[[@as LuaWireConnector]]
+    assert(red_out.connect_to(red_in, false, defines.wire_origin.player))
+  end
 end
 
 return Combinators
