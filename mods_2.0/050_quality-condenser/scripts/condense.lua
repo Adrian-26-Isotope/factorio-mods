@@ -41,15 +41,6 @@ local function get_spoil_percentage(inventory, item)
   return spoil_percentage
 end
 
-local function set_idle_status(struct)
-  struct.entity.disabled_by_script = true
-  struct.entity.custom_status = {
-    diode = defines.entity_status_diode.yellow,
-    label = {"entity-status.sleeping"},
-  }
-  enable_wake_on_input(struct)
-end
-
 helpers.write_file("quality-condenser.log", "", false, nil)
 
 local function calculate_recreated_count(item_count, probability)
@@ -83,6 +74,15 @@ local function roll_quality_upgrade(start_quality_name, quality_effect, force)
   end
 
   return current_quality_name
+end
+
+function Condense.set_idle_status(struct)
+  struct.entity.disabled_by_script = true
+  struct.entity.custom_status = {
+    diode = defines.entity_status_diode.yellow,
+    label = {"entity-status.sleeping"},
+  }
+  enable_wake_on_input(struct)
 end
 
 function Condense.trigger(struct)
@@ -164,7 +164,7 @@ function Condense.trigger(struct)
 
   -- Only go idle if inventory is empty
   if struct.container_inventory.get_item_count() == 0 then
-    set_idle_status(struct)
+    Condense.set_idle_status(struct)
   end
 end
 
