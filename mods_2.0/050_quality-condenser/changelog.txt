@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 2026. 01. 29
+  Changes:
+    - Major overhaul of the condensers logic. It behaves a lot different now.
+  Info:
+    - For details see README.md in git repo.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: ????
   Info:
