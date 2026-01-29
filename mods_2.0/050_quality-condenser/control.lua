@@ -36,6 +36,19 @@ function reset_offering_2(struct)
   storage.deathrattles[script.register_on_object_destroyed(struct.inserter_2_offering)] = {"offering-2", struct.id}
 end
 
+function reset_offering_3(struct)
+  if struct.inserter_3_offering.valid then return end
+  -- game.print(string.format("resetting offering 3 for #%d @ %d", struct.id, game.tick))
+  struct.inserter_3.held_stack.clear()
+  struct.inserter_3_offering = storage.surface.create_entity{
+    name = "item-on-ground",
+    force = "neutral",
+    position = {0.5 + struct.index, -10.5},
+    stack = {name = "wood"},
+  }
+  storage.deathrattles[script.register_on_object_destroyed(struct.inserter_3_offering)] = {"offering-3", struct.id}
+end
+
 local function spill_entity_inventory(entity, defines_inventory)
   local inventory = entity.get_inventory(defines_inventory)
 
@@ -228,6 +241,9 @@ function Handler.on_created_entity(event)
     inserter_1_offering = storage.invalid,
     inserter_2 = nil,
     inserter_2_offering = storage.invalid,
+    decider_1 = nil,
+    inserter_3 = nil,
+    inserter_3_offering = storage.invalid,
   })
   storage.index = storage.index + 1
 
@@ -273,6 +289,7 @@ function Handler.on_created_entity(event)
 
   Combinators.create_for_struct(struct)
   reset_offering_2(struct)
+  reset_offering_3(struct)
 end
 
 for _, event in ipairs({
@@ -296,8 +313,15 @@ local deathrattles = {
   ["offering-1"] = function (deathrattle)
     local struct = storage.structs[deathrattle[2]]
     if struct and struct.entity.valid then
-      struct.entity.custom_status = nil
-      struct.entity.disabled_by_script = false
+      -- Check if inventory is empty before starting the crafting cycle
+      if struct.container_inventory.get_item_count() == 0 then
+        -- Inventory is empty, abort crafting and go back to sleep immediately
+        enable_wake_on_input(struct)
+      else
+        -- Inventory has items, proceed with crafting
+        struct.entity.custom_status = nil
+        struct.entity.disabled_by_script = false
+      end
     end
   end,
   ["offering-2"] = function (deathrattle)
@@ -305,6 +329,17 @@ local deathrattles = {
     if struct and struct.entity.valid then
       Condense.trigger(struct)
       reset_offering_2(struct)
+    end
+  end,
+  ["offering-3"] = function (deathrattle)
+    local struct = storage.structs[deathrattle[2]]
+    if struct and struct.entity.valid then
+      -- Abort crafting if inventory is empty mid-crafting
+      if struct.container_inventory.get_item_count() == 0 and struct.entity.is_crafting() then
+        struct.entity.cancel_crafting()
+        Condense.set_idle_status(struct)
+      end
+      reset_offering_3(struct)
     end
   end,
   ["crafter"] = function (deathrattle)
@@ -325,6 +360,9 @@ local deathrattles = {
       struct.inserter_1_offering.destroy()
       struct.inserter_2.destroy()
       struct.inserter_2_offering.destroy()
+      struct.decider_1.destroy()
+      struct.inserter_3.destroy()
+      struct.inserter_3_offering.destroy()
     end
   end,
   ["container"] = function (deathrattle)
@@ -345,6 +383,9 @@ local deathrattles = {
       struct.inserter_1_offering.destroy()
       struct.inserter_2.destroy()
       struct.inserter_2_offering.destroy()
+      struct.decider_1.destroy()
+      struct.inserter_3.destroy()
+      struct.inserter_3_offering.destroy()
     end
   end,
 }
