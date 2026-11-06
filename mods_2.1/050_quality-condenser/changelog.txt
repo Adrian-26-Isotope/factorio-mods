@@ -1,0 +1,331 @@
+---------------------------------------------------------------------------------------------------
+Version: 3.0.1
+Date: 2026. 11. 06
+  Changes:
+    - Compatibe with Factorio 2.1 now.
+  Info:
+    - For details see README.md in git repo.
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 2026. 01. 29
+  Changes:
+    - Major overhaul of the condensers logic. It behaves a lot different now.
+  Info:
+    - For details see README.md in git repo.
+---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: ????
+  Info:
+    - Log to seperate file
+---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2025. 10. 19
+  Info:
+    - No wait this is better
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 2025. 10. 19
+  Info:
+    - Always sort sand merge at the end of a craft cycle
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 2025. 10. 17
+  Info:
+    - Disable logging (until i migrate to script-output)
+  Compatibility:
+    - Fixed it not working on Space Exploration 0.7.25's space surfaces
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2025. 10. 07
+  Info:
+    - Allow the quality condenser in space
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2025. 09. 24
+  Changes:
+    - Now activates as soon as you insert items, no longer a 2+ second delay.
+    - Increased the inventory size to 100, so unstackables can be used at 1% quality.
+    - Increased the crafting times to compensate for the increased convenience you now get.
+  Info:
+    - Overhaul part 1
+    - Overhaul part 2
+---------------------------------------------------------------------------------------------------
+Version: 1.3.2
+Date: 2025. 08. 15
+  Info:
+    - Fixed that mining the edge did not return the item
+---------------------------------------------------------------------------------------------------
+Version: 1.3.1
+Date: 2025. 06. 02
+  Info:
+    - If the condenser did nothing, pause it
+    - Include the module slot item counts in the idle timer as well
+    - Change the sound from recycler to fusion generator
+    - Require .48 for defines.inventory
+---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 2025. 06. 02
+  Info:
+    - Drop initial skin
+    - Switch from accumulator earrape to recycler noises
+    - Shift the texture up a little bit
+    - Make recipe self starting and drop upper quality support
+    - Make them searchable on the map and only take 10 seconds
+    - Wire inactivity directly to the condenser
+    - Normal takes 2.5 seconds, legendary takes 1 second
+---------------------------------------------------------------------------------------------------
+Version: 1.2.7
+Date: 2025. 05. 18
+  Info:
+    - Fix invalid LuaEntity @ control.lua:324
+---------------------------------------------------------------------------------------------------
+Version: 1.2.6
+Date: 2025. 05. 14
+  Info:
+    - Unify mining times
+    - Fix a small chance of the inactivity timer going out of bounds
+---------------------------------------------------------------------------------------------------
+Version: 1.2.5
+Date: 2025. 04. 24
+  Info:
+    - Prevent the condenser getting stuck on 100% quality
+---------------------------------------------------------------------------------------------------
+Version: 1.2.4
+Date: 2025. 04. 04
+  Info:
+    - Sum spoil percentages for that quality only
+    - add CN translation (#33)
+---------------------------------------------------------------------------------------------------
+Version: 1.2.3
+Date: 2025. 03. 31
+  Info:
+    - Fix condenser not having tabs on newly created worlds
+---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+Date: 2025. 03. 30
+  Info:
+    - Fix migration running on newly created worlds
+---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: 2025. 03. 28
+  Info:
+    - Require science packs instead of only time
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2025. 03. 26
+  Info:
+    - Require 2.0.38 for the proxy container (inventory can now be read with wires)
+---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+Date: 2025. 03. 26
+  Info:
+    - Require 2.0.35 for quality_indicator_shift
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 2025. 03. 26
+  Info:
+    - Properly fix next_probability
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2025. 03. 26
+  Info:
+    - Fix compatibility issue with next_probability != 0.1 qualities
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2025. 02. 20
+  Info:
+    - Mention how it is not a cheat with just one module slot
+    - Give the augmentor mod a honorable mention
+    - Sort and merge only when there are split stacks when full
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025. 02. 13
+  Info:
+    - Chance the default module slots from 3 to 1
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 2025. 02. 13
+  Info:
+    - Fix players being able to deconstruct the base in editor mode
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2025. 02. 12
+  Info:
+    - Sort and merge each time the machine runs
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2025. 02. 12
+  Info:
+    - Make energy usage configurable (for now)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025. 02. 12
+  Info:
+    - Update readme
+    - Fix empty backtick shenanigans
+    - Mention the alt scrolling quality change mod
+    - Experience tabbed pane hell
+    - Add tabs to switch between modules and inventory
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025. 02. 11
+  Info:
+    - Fix loaders being unable to interact
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025. 02. 09
+  Info:
+    - Fix crash due to incomplete math.min()
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025. 02. 06
+  Info:
+    - Mod portal release
+---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 2025. 02. 06
+  Info:
+    - Prepare to assign technology bonuses from config
+    - Revert beacon interface being indestructible by default
+    - Apply the technology modifiers
+    - Test and document negative nothing effects
+    - Correctly apply bonus quality research
+    - Ahem
+---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 2025. 02. 05
+  Info:
+    - Only condense when it would output at least one
+    - Confirm the right amount got removed and inserted
+    - Cleanup the container when the crafter goes away
+    - Spill items when mining the crafter
+    - Spill in deathrattle
+    - Handle transferring quality upgraded containers ourselves
+    - Fix entity healths
+    - Give the container no deathrattle
+    - This should be enough to support cloning
+    - Fix item loss due to disallowed cloning
+    - Hide deathrattle debug messages
+    - Typo
+    - Fix recipe being unlocked
+    - Anticipate quality_indicator_shift
+    - Make module slots configurable
+    - Convert base quality into a math expression
+    - Set all base qualities with the beacon interface
+    - Rely on beacon interface for indestructible invisible beacons
+    - Update beacon interfaces in on_configuration_changed
+    - Prototype a nothing effect
+    - Write boilerplate for control stage nothing technology
+    - Map technology names to quality modifiers on world load
+    - Support parsing negative quality boosts
+---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2025. 02. 03
+  Info:
+    - Fix unrenamed variable
+    - Fix crash when there is not enough to upgrade
+    - Add failsafe for machines stuck in idle (full & newly unlocked quality, changed recipe)
+    - Update recipe
+    - Add a technology node under red chips
+    - Add technology description
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2025. 02. 03
+  Info:
+    - Tinker with the accumulator sounds
+    - This doesn't sound half bad tbh
+    - Cleanup unused sound settings
+    - Prevent pipetting it in editor mode
+    - Ensure the recipe is always set
+    - Fix 〃
+    - Fix deadlock
+    - Map which qualities are below the current setting
+    - Detect eligible stacks
+    - Make the machine function
+    - Fix black square not loading
+    - Cap quality at 100%
+    - Strengthen math and logging
+    - Fix closure saving error
+    - Initial attempt at preserving spoil percentages
+    - Fix lower than expected spoil percentages
+    - Document it preserves spoiled state
+    - Actually this cannot be cached
+    - Fix wrong table key check
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2025. 02. 03
+  Info:
+    - Align result quality over the chimney
+    - Fix second offering
+    - Use the recipe quality as the shown quality
+    - Draw the quality icon nice and large
+    - Allow users access to the quality dropdown
+    - Use a whole bunch of items as placeholder
+    - Get the machine to spin once with idle items
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2025. 02. 02
+  Info:
+    - Module positioning
+    - Use my hurricane crafter graphic set generator
+    - Make the base quality setting a double
+    - Update thumbnail
+    - Change debounce from 5 to 2.5 seconds
+    - Draw the 4 items in the base larger
+    - Detect recipe done
+    - Maybe better deathrattler?
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2025. 01. 31
+  Info:
+    - Resume development
+    - Do not drop a rocket silo
+    - Setup the hidden surface
+    - Sum the total items inside with circuits
+    - Add note about the machine being ticked
+    - Prepare the recipe icon
+    - Lock the quality disruptor to an "any quality" recipe
+    - Test with the repair pack
+    - Make the entity blueprintable
+    - Rename furnace to crafter
+    - Get a reset pulse every time the sum changes
+    - Add the counter itself
+    - Tuck the combinator setup away in another file
+    - Rebrand from quality disruptor to quality condenser
+    - Add research center skin (as an option)
+    - Hide the alt recipe icon
+    - Use automated insertion!
+    - Render the modules large and offset
+    - Add configurable base quality ("items per next quality")
+    - `draw_as_glow = true`
+    - Add an inserter that waits for 5 seconds
+    - Increase selection area
+    - Prevent highlighting by inserters
+    - Only match the tick to make re-arming simpler
+    - Fix flag typo
+    - Clean up the combinators upon deathrattle
+    - Setup offering system
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2025. 01. 10
+  Info:
+    - Reword readme for monospaced goodness
+    - Stash data stage progress
+    - Make frame count coexist with the shadow
+    - Try to get the working visualization to work
+    - Fix the working viz due to nesting
+    - Make it look good day and night
+    - Credit "hurricane compatible graphics_set" to xorimuth
+    - Tweak the (animation) speed
+    - Add sounds
+    - Make the funnel not transparent (kinda distracting)
+    - Fix the glow visualization desyncing
+    - Stash crafting speed tweaks (speed modules will be bad)
+    - Stash mod comparison table
+    - Set minimum animation speed to 50%
+    - Initial draft of multiblock entity
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2025. 01. 03
+  Info:
+    - Initial commit
