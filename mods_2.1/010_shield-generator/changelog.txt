@@ -1,0 +1,54 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2026. 07. 03
+  Info:
+    - Ported to 2.1
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025. 05. 31
+  Info:
+    - Fix repair turret placed landfill causing a crash
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025. 04. 30
+  Info:
+    - Fix empty tiles always being invulnerable
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025. 03. 28
+  Info:
+    - Require science packs instead of only time
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025. 02. 22
+  Info:
+    - Initial commit
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2025. 02. 22
+  Info:
+    - Update description and dependencies
+    - Rename simple entity
+    - Remove stray example code
+    - Add crafter, item, recipe & technology
+    - Lock the shield generator to an active animation
+    - Speed up the animation
+    - Lock crafter to space
+    - Fix shield generator not being ghostable
+    - Keep track of shield generators on a surface
+    - Only listen for the damage event when necessary
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2025. 02. 21
+  Info:
+    - Stash proof of concept
+    - Test with a single large cover
+    - Nullify asteroid damage via script
+    - Revert to per-tile covers to keep collision debug renderer clean
+    - Add the cover to newly placed tiles
+    - Find entities filtered does not work for entities without a collision box
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2025. 02. 19
+  Info:
+    - Initial commit

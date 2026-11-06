@@ -15,7 +15,7 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class BuildModCommand extends Command
 {
-    protected static $defaultName = 'build:mod';
+    protected static $defaultName = '2.1:build';
 
     protected function configure(): void
     {
@@ -25,7 +25,7 @@ class BuildModCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $mod = ExpansionMods::findOrFail($input->getArgument('name'));
+        $mod = ExpansionMods::findOrFail('mods_2.1', $input->getArgument('name'));
 
         $this->clear_build_directory();
         $zip_pathname = $mod->build();

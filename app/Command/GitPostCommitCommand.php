@@ -27,11 +27,14 @@ class GitPostCommitCommand extends Command
         $commit_message = $commit_message[0];
         $output->writeln("<comment>$commit_message</comment>");
         if ($commit_message == "Bump version") return Command::SUCCESS;
+        if (str_starts_with($commit_message, 'Port')) return Command::SUCCESS;
 
-        foreach (ExpansionMods::list() as $expansionMod) {
-            if (array_key_exists($expansionMod->directory, $touched_mods)) {
-                $touched_mod_files = $touched_mods[$expansionMod->directory];
-                if (! in_array('changelog.txt', $touched_mod_files)) $expansionMod->addInfoToChangelog($commit_message);
+        foreach (['mods_2.1', 'mods_2.0'] as $folder) {
+            foreach (ExpansionMods::list($folder) as $expansionMod) {
+                if (array_key_exists($expansionMod->directory, $touched_mods)) {
+                    $touched_mod_files = $touched_mods[$expansionMod->directory];
+                    if (!in_array('changelog.txt', $touched_mod_files)) $expansionMod->addInfoToChangelog($commit_message);
+                }
             }
         }
 
@@ -51,7 +54,7 @@ class GitPostCommitCommand extends Command
             if (str_starts_with($line, ':')) {
                 $relative_path = explode("\t", $line)[1];
                 $relative_path_bits = explode('/', $relative_path);
-                if ($relative_path_bits[0] == "mods_2.0") {
+                if (in_array($relative_path_bits[0], ['mods_2.0', 'mods_2.1'])) {
                     $mod_directory = $relative_path_bits[1];
                     preg_match('/\d{3}_/U', $mod_directory, $matches);
                     if (count($matches) > 0) {

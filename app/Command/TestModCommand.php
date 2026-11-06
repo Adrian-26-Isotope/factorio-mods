@@ -10,7 +10,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class TestModCommand extends Command
 {
-    protected static $defaultName = 'test:mod';
+    protected static $defaultName = '2.1:test';
 
     protected function configure(): void
     {
@@ -20,7 +20,7 @@ class TestModCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $mod = ExpansionMods::findOrFail($input->getArgument('name'));
+        $mod = ExpansionMods::findOrFail('mods_2.1', $input->getArgument('name'));
 
         do {
             $mod->test();

@@ -1,0 +1,63 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 2026. 07. 03
+  Info:
+    - Ported to 2.1
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2026. 01. 05
+  Info:
+    - Added a surface name blacklist (defaults to rubia)
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025. 12. 10
+  Info:
+    - Match inserter allow/deny flags with main entity automatically (closed beta test, reverted)
+    - The input/output/none modes are now controlled with startup settings
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2025. 04. 29
+  Info:
+    - No destructible entities on my christian minecraft server again
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025. 04. 18
+  Info:
+    - God what rabbit hole am i even falling into
+    - Fix proxy re-assignment
+    - Migrate indestructible cargo bay proxies
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025. 02. 09
+  Info:
+    - Fix crash when upgrading the quality of a cargo landing pad
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025. 02. 07
+  Info:
+    - Fix invalid entity error when upgrading (weird line numbers tho)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025. 02. 04
+  Info:
+    - Swap out LuaEntity::get_gargo_bays() polyfill
+    - Mod portal release
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2025. 02. 28
+  Info:
+    - Track space platform hubs and cargo landing pads
+    - Attempt to write link and update proxy code
+    - Fix ipairs issue
+    - Fix clearing the entity target
+    - Never update the inventory index
+    - Schedule surface wide proxy update for the next tick
+    - Do not draw cargo bay inventory contents
+    - Listen to the surface events
+    - Fix new space platform hubs going unnoticed
+    - Add thumbnail
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2025. 02. 28
+  Info:
+    - Initial commit

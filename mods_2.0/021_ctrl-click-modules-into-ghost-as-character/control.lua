@@ -1,16 +1,11 @@
 local module_inventory_for_type = {
-  ["furnace"           ] = defines.inventory.furnace_modules,            -- 4
-  ["assembling-machine"] = defines.inventory.assembling_machine_modules, -- 4
-  ["lab"               ] = defines.inventory.lab_modules,                -- 3
-  ["mining-drill"      ] = defines.inventory.mining_drill_modules,       -- 2
-  ["rocket-silo"       ] = defines.inventory.rocket_silo_modules,        -- 4
-  ["beacon"            ] = defines.inventory.beacon_modules,             -- 1
+  ["furnace"           ] = defines.inventory.crafter_modules,      -- 4
+  ["assembling-machine"] = defines.inventory.crafter_modules,      -- 4
+  ["lab"               ] = defines.inventory.lab_modules,          -- 3
+  ["mining-drill"      ] = defines.inventory.mining_drill_modules, -- 2
+  ["rocket-silo"       ] = defines.inventory.crafter_modules,      -- 4
+  ["beacon"            ] = defines.inventory.beacon_modules,       -- 1
 }
-
-local module_inventory_size = {}
-for _, entity_prototype in pairs(prototypes.entity) do
-  module_inventory_size[entity_prototype.name] = entity_prototype.module_inventory_size
-end
 
 local is_module = {}
 for _, item_prototype in pairs(prototypes.item) do
@@ -102,7 +97,7 @@ script.on_event("ctrl-click-modules-into-ghost-as-character", function(event)
   local inventory_index = module_inventory_for_type[ghost.ghost_type]
   if inventory_index == nil then return end -- ghost not of an entity that supports module slots
 
-  local module_slots = module_inventory_size[ghost.ghost_name]
+  local module_slots = ghost.ghost_prototype.get_inventory_size(inventory_index, ghost.quality)
   if module_slots == 0 then return end
 
   local holding_module, module_name, module_quality = is_player_holding_module(player)

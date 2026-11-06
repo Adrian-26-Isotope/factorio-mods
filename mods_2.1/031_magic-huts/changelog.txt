@@ -1,0 +1,305 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.7.1
+Date: 2026. 09. 06
+  Info:
+    - Fix load error due to wube's require changes
+---------------------------------------------------------------------------------------------------
+Version: 1.7.0
+Date: 2026. 07. 24
+  Info:
+    - Ported to 2.1
+---------------------------------------------------------------------------------------------------
+Version: 1.6.6
+Date: 2025. 10. 07
+  Info:
+    - Blacklist the k2 atmospheric condenser
+    - Migrate to the official filter helper hooks
+---------------------------------------------------------------------------------------------------
+Version: 1.6.5
+Date: 2025. 10. 03
+  Info:
+    - Fix factory planner 2.0.37 and up not detecting modules properly
+---------------------------------------------------------------------------------------------------
+Version: 1.6.4
+Date: 2025. 09. 30
+  Info:
+    - Fix inverted if
+---------------------------------------------------------------------------------------------------
+Version: 1.6.3
+Date: 2025. 09. 29
+  Info:
+    - Fix crash with newer factorissimo versions
+    - Blacklist SE radiators and telescopes
+---------------------------------------------------------------------------------------------------
+Version: 1.6.2
+Date: 2025. 08. 23
+  Info:
+    - Make magic huts immune to biters & spitters
+    - Preserve configuration through death
+    - Dead unconfigured buildings show as unconfigured ghosts
+    - Fix crash when coping a dead building's ghost
+---------------------------------------------------------------------------------------------------
+Version: 1.6.1
+Date: 2025. 08. 22
+  Info:
+    - Render which items/fluids are missing or clogging
+---------------------------------------------------------------------------------------------------
+Version: 1.6.0
+Date: 2025. 08. 20
+  Info:
+    - Remove Filter Helper version lock
+    - Fixed that fluid ingredients were counting as produced fluids
+    - One crafting attempt every 60, regardless of success
+    - Fixed float compare crash
+    - Support fluid products
+    - Fix product inserters crashing for fluid products
+---------------------------------------------------------------------------------------------------
+Version: 1.5.0
+Date: 2025. 08. 20
+  Info:
+    - Add support for a single vanilla beacon
+---------------------------------------------------------------------------------------------------
+Version: 1.4.0
+Date: 2025. 08. 19
+  Info:
+    - Clear the filters and requests when unconfiguring
+    - Allow debugging on the hidden surface
+    - Output required fluids on the wire too
+    - Update the status messages
+    - Reset crafting progress after swapping recipes
+    - Do not consume more than 100% power per craft
+    - Mark py coal processing incompatible for now
+    - Retry crafting after 10 seconds in case of failure
+    - Fix factory list showing as empty after updating mods
+    - Migrate in the second constant combinator
+---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 2025. 08. 14
+  Info:
+    - Port the "space" buildings as variants with uint16 storage size (hold shift)
+---------------------------------------------------------------------------------------------------
+Version: 1.2.3
+Date: 2025. 08. 12
+  Info:
+    - Remove more bar related inventory code
+---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+Date: 2025. 08. 12
+  Info:
+    - Remove code still depending on inventory bar
+---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: 2025. 08. 12
+  Info:
+    - Remove the bar from the factory inventory
+    - Allow the crafter a & b in space
+    - Enhance copy pasting on inserters/requesters experience
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2025. 08. 06
+  Info:
+    - Support fluid ingredients
+    - Support filtering output inserters/loaders on the main product with copy paste
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025. 08. 04
+  Info:
+    - Add mod-data blacklist for recipe names
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 2025. 07. 22
+  Info:
+    - Added experimental FilterHelper support (check their open pull requests)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 2025. 07. 22
+  Info:
+    - Fix ingredients lower than 1 per minute not being requested by chests
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2025. 06. 27
+  Info:
+    - Fix gui unifier compatibility
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2025. 06. 18
+  Info:
+    - Fix item ingredient rounding error
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025. 06. 18
+  Info:
+    - Fix trying to top up with the wrong count
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025. 06. 18
+  Info:
+    - Floating point debug
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025. 06. 17
+  Info:
+    - Fix beacons not supported notice
+    - Fix unbuildable entity crash and disable gui logging
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025. 06. 13
+  Info:
+    - Inflate the io buffers
+    - Use the tried and tested item io buffers
+    - Swap the bar for fake filters
+    - Support copy pasting onto requesting chests
+    - Fix requesting already present buildings/modules
+    - Allow quality factories and force exports to fit
+    - Fix copy paste crash when source is unconfigured
+    - Disable fluid support pending implementation concerns
+    - Cache statistics
+    - Require factory planner version with quality buttons
+    - Restrict factory districts
+    - Cleanup factory district icon renderer
+    - Provide factory info in the tooltip
+    - Mod portal release
+---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 2025. 06. 12
+  Info:
+    - Get stuck trying to connect fluidboxes from everywhere
+    - chatgtp my ass
+    - Get the fluid positions code to behave
+    - Allow pipe to grounds to be placed against the factory
+    - Add a compound entity for the fluidboxes
+    - Simplify localization
+    - Route factory index changes through Buildings.set_factory_index
+    - Fix building held factory over existing factory
+    - Bug squashing
+    - Prepare the triggers for ingredients & done
+    - Run the minute crafter only when fulfilled
+    - Fire a lua event each time the recipe completes
+    - Setup the working & waiting toggle detection
+    - Update the status text on the factory
+    - Hide container contents from alt mode
+    - Create an insert plan for the buildings and modules
+    - Show the slot requirement/availability during exporting
+    - Eject items when filter/bar no longer allows that slot
+    - Fix copy paste getting the order wrong
+    - Block triggers from changing status of inactive factory
+    - Consume power whilst crafting
+    - Start writing the crafting logic
+    - Detect when not all of the output was removed yet
+    - Reach bare minimum state
+---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 2025. 06. 10
+  Info:
+    - Calculate the amount of slots needed and filter them
+    - Set the bar too, and skip the crashing ghosts
+    - Setup the initial hidden surface
+    - Setup the constant and decider combinators
+    - Fill the constant combinator with the requirements
+    - Check if all the starting items are present with circuits
+    - Create crafter prototype with door light
+    - Drop the glow visualization
+    - Give each factory a 60s crafter
+    - Kill all children when the parent dies
+    - Setup the eei
+    - Make the doorframes selectable for progress
+    - Disable inserters on the crafter
+    - Detect trying to place a factory over another factory
+---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2025. 06. 08
+  Info:
+    - Listen for the build events
+    - Persist factory index in ghosts
+    - Make the factory index guesser more elaborate
+    - Setup the 4 lines of luarendering
+    - Set default luarendering text
+    - Increment factory count upon placement
+    - Decrement factory count when removing a factory
+    - Mark the factories exempt from lightning
+    - Support blueprinting
+    - Unconfigure buildings when factory gets deleted
+    - Have code ready to support copying by pipette
+    - Render text for factory ghosts too
+    - Override serpent better
+    - Allow copy pasting between tiers and ghosts
+    - Change factories from reversed array to indexed
+    - Slight refresh optimizations
+    - Allow selecting a factory from the sidebar
+    - Prevent counter going haywire
+    - Another early return
+    - Select the selected to deselect
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2025. 06. 06
+  Info:
+    - Commence the left gui phase
+    - Badly recreate the logistic section row
+    - Slightly better frame
+    - Scroll pane
+    - Get close enough
+    - Cleanup styles
+    - Populate the list with actual factories
+    - Support deleting factories
+    - Cleanup factory deleter
+    - Match fp factory name width and ... wrapping
+    - Always show space location name
+    - Pipette the factory item and remember the index
+    - Delete old factories of the same name during exporting
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2025. 06. 04
+  Info:
+    - Change how the debug output is shown
+    - Handle machines and modules with quality
+    - The items/m button can move/hide, detect that
+    - Better detect quality from the sprite button
+    - Store power and pollution in the factory table
+    - Grab the district's space location
+    - Fix missing argument for recipe blocked messages
+    - Fix crash when there was no pollution
+    - Block recipes that need or make spoiling items
+    - Finish the factory planner stage
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2025. 03. 15
+  Info:
+    - Grab the products, byproducts & ingredients
+    - Default serpent to sort keys
+    - Validate timescale/rate
+    - Check if all products are 100% satisfied
+    - Micro
+    - Grab the power and pollution
+    - Fix sortKeys typo
+    - Extract the recipe and machine from the table
+    - Blacklist rockets, drills & offshore pumps
+    - Sum all the entities and modules
+    - Do round up the buildings
+    - Move quality to the back
+    - Rearrange code
+    - Check for beacons
+    - Ensure the player is on the 1st floor
+    - Require all subfloors to be visible
+    - Power pollution comment
+    - Get the power and pollution as their true number
+    - Check if a recipe is available
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2025. 03. 07
+  Info:
+    - Add the magic hut button next to products
+    - Detect the selected factory
+    - Strip the trashed icon from the factory name
+    - Move the factoryplanner code into its own file
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2025. 03. 05
+  Info:
+    - Setup the factory container prototypes
+    - Give the magic huts an item w/recipe
+    - Assign rocket stack sizes
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2025. 03. 04
+  Info:
+    - Initial commit

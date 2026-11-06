@@ -1,0 +1,19 @@
+{
+  "name": "advanced-centrifuge",
+  "version": "2.3.1",
+  "title": "Advanced Centrifuge",
+  "description": "An advanced centrifuge, to fill in the gap of advanced buildings for Krastorio 2",
+  "author": "kiratu11",
+  "contact": "",
+  "homepage": "",
+  "factorio_version": "2.1",
+  "dependencies": [
+    "base",
+    "? space-age",
+    "? Krastorio2",
+    "? Krastorio2-spaced-out",
+    "? space-exploration",
+    "? Cerys-Moon-of-Fulgora",
+    "? atan-nuclear-science"
+  ]
+}

@@ -1,0 +1,107 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.3.1
+Date: 2026. 09. 06
+  Info:
+    - Fix shared pipe pictures due to wube's require behavior changes
+---------------------------------------------------------------------------------------------------
+Version: 2.3.0
+Date: 2026. 07. 15
+  Info:
+    - Ported to 2.1
+---------------------------------------------------------------------------------------------------
+Version: 2.2.7
+Date: 2025-08-13
+  Changes:
+    - Made the centrifuge rotatable again.
+  Compatibility:
+    - All 4 sides (not just the front) have graphics for fluid ports now.
+---------------------------------------------------------------------------------------------------
+Version: 2.2.6
+Date: 2025-07-21
+  Compatibility:
+    - Added support for Krastorio 2 Spaced Out.
+---------------------------------------------------------------------------------------------------
+Version: 2.2.5
+Date: 2025-04-30
+  Compatibility:
+    - Support the renamed Krastorio 2 items
+---------------------------------------------------------------------------------------------------
+Version: 2.2.4
+Date: 2025-01-21
+  Compatibility:
+    - Defined two front facing fluid connections for other mods to use. (south side, cannot rotate)
+---------------------------------------------------------------------------------------------------
+Version: 2.2.3
+Date: 2025-01-21
+  Compatibility:
+    - If the Nuclear Science mod is installed the advanced centrifuge can craft fuel cells as well.
+---------------------------------------------------------------------------------------------------
+Version: 2.2.2
+Date: 2025-01-21
+  Compatibility:
+    - If the Nuclear Science mod is installed the advanced centrifuge gains two extra module slots.
+---------------------------------------------------------------------------------------------------
+Version: 2.2.1
+Date: 2025-01-10
+  Compatibility:
+    - Corrected where the Cerys mod adds fluid connections for their nuclear waste centrifuging.
+---------------------------------------------------------------------------------------------------
+Version: 2.2.0
+Date: 2024-12-18
+  Changes:
+    - Added a startup setting for 50% base productivity, disabled by default.
+---------------------------------------------------------------------------------------------------
+Version: 2.1.1
+Date: 2024-12-17
+  Changes:
+    - Added item sounds.
+---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 2024-12-16
+  Changes:
+    - The technology icon now shows a green working glow.
+    - The advanced centrifuge now supports circuit wires.
+  Compatibility:
+    - Added a frozen sprite. (200kw heating energy, twice that of the normal centrifuge)
+    - If space age is installed, require space science to unlock the technology as well.
+  Info:
+    - The new sprites and the circuit connection definitions were donated by user S6X here:
+    - https://mods.factorio.com/mod/advanced-centrifuge/discussion/675f51cabdb86728d9d16d8c
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2024-12-15
+  Changes:
+    - Cleaned up the code. (tabs to spaces, and file endings)
+  Compatibility:
+    - Removed the green tint from the icon if SE is installed.
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2024-12-13
+  Changes:
+    - Added Quezler as a maintainer.
+    - Added 2.0 compatibility.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2023-05-29
+  Changes:
+    - Reduced advanced centrifuge volume.
+    - Changed advanced centrifuge icon.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2023-05-26
+  Bugfixes:
+    - Fixed error when trying to load SE whithout K2.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2023-05-26
+  Changes:
+    - Removed Krastorio 2 requirement.
+    - Changed advanced centrifuge item icon.
+    - Advanced centrifuge recipe changes.
+  Bugfixes:
+    - Fixed some typos.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2023-05-26
+  Features:
+    - Introduced.

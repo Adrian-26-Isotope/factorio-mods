@@ -1,0 +1,15 @@
+{
+    "name": "sesa",
+    "title": "SESA",
+    "description": "Space Exploration + Space Age = Seesaw",
+
+    "version": "1.2.0",
+    "author": "Quezler",
+    "factorio_version": "2.1",
+
+    "dependencies": [
+        "space-exploration-postprocess >= 0.7.5",
+        "space-exploration >= 0.7.54",
+        "space-age"
+    ]
+}

@@ -1,0 +1,78 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 2026. 07. 03
+  Info:
+    - Ported to 2.1
+---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+Date: 2025. 08. 25
+  Info:
+    - Fix the space balancer having the wrong name
+    - Support purple from "One More Tier"
+---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: 2025. 08. 11
+  Info:
+    - Added space splitter variant
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2025. 08. 04
+  Info:
+    - Quote conversion, advanced belts sa override & new thumbnail
+---------------------------------------------------------------------------------------------------
+Version: 1.1.7
+Date: 2025. 06. 06
+  Info:
+    - Add support for Advanced Belts
+---------------------------------------------------------------------------------------------------
+Version: 1.1.6
+Date: 2025. 05. 20
+  Info:
+    - Fixed K2SO superior splitter downgrade
+---------------------------------------------------------------------------------------------------
+Version: 1.1.5
+Date: 2025. 05. 20
+  Info:
+    - Readme tweak
+    - Support the superior belt from K2SO
+---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+Date: 2025. 05. 01
+  Info:
+    - Extend prismatic belt support to Krastorio 2
+    - Add russian translation contributed by eugenikus8 on discord
+    - Expose handle to other mods
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 2025. 05. 01
+  Info:
+    - Support Krastorio 2's green and purple belts
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2024. 11. 15
+  Info:
+    - Suggest the presence of newsletter-for-mods-made-by-quezler
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2024. 11. 14
+  Info:
+    - Require the presence of newsletter-for-mods-made-by-quezler
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2024. 11. 05
+  Info:
+    - Add note for third part support
+    - Add test scenario/world
+    - Fix broken animation of the blue and green lane balancers
+    - Support prismatic belts
+    - Replace stray yellow loader with red loader
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2024. 10. 15
+  Info:
+    - Supports the tungsten -> turbo rename
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024. 10. 14
+  Info:
+    - Mod portal release

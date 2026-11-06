@@ -1,13 +1,6 @@
--- step 1
-Event = {addListener = function() end}
+require("misc")
 
--- step 2
-local Zonelist = require("__space-exploration__.scripts.zonelist")
-
--- step 3
-Event = nil
-
--- step 4
+local Zonelist = require_SE("__space-exploration__.scripts.zonelist")
 
 --- @since 2.1.0
 return Zonelist

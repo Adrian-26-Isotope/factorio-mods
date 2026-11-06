@@ -1,0 +1,47 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: ????
+  Info:
+    - Remove the quality feature flag dependency
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2026. 07. 03
+  Info:
+    - Ported to 2.1
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025. 03. 31
+  Info:
+    - Support mods that allow configuring rocket silos
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2024. 11. 29
+  Info:
+    - Fix crash when trying to change the quality of a not assembling machine ghost
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2024. 11. 26
+  Info:
+    - Only function if the player's hand is empty
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024. 11. 23
+  Info:
+    - Mod portal release
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2024. 11. 23
+  Info:
+    - Fix typo and prevent changing fluid only recipes
+    - Dump inventory where art tho?
+    - Try to be clever
+    - Just spill and not care about space platforms
+    - Add initial thumbnail
+    - Add stuff to thumbnail
+    - Block not yet unlocked qualities
+    - Support ghosts
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2024. 11. 23
+  Info:
+    - Initial commit

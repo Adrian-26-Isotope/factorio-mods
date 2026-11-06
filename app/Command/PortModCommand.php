@@ -5,6 +5,7 @@ namespace App\Command;
 use App\Misc\ExpansionMod;
 use App\Misc\ExpansionMods;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -45,15 +46,18 @@ class PortModCommand extends Command
 
         file_put_contents($changelog_pathname = "$to/changelog.txt", $changelog);
 
-        $expansionMod = new ExpansionMod($prefix . $mod_name, $mod_name);
-        $next_version = $expansionMod->getNextMajorVersion() . '.0.0';
-        $expansionMod->setInfoJsonVersion($next_version);
+        $expansionMod = new ExpansionMod('mods_2.0', $prefix . $mod_name, $mod_name);
+        $version = $expansionMod->getVersion();
+        $version->major++;
+        $version->minor = 0;
+        $version->patch = 0;
+        $expansionMod->setInfoJsonVersion($version);
         $expansionMod->setInfoJsonFactorioVersion("2.0");
         $expansionMod->addNewsletterDependency();
 
         $lines = array_merge([
             '---------------------------------------------------------------------------------------------------',
-            "Version: {$next_version}",
+            "Version: {$version}",
             'Date: ' . date('Y. m. d'),
             '  Info:',
             '    - Ported to 2.0',

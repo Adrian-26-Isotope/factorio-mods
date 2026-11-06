@@ -1,0 +1,25 @@
+{
+    "name": "quality-upgrade-planner",
+    "title": "Quality upgrade planner",
+    "description": "Bulk changing the quality of buildings, recipes, modules, filters, and more.",
+
+    "version": "2.8.1",
+    "author": "Quezler",
+    "factorio_version": "2.1",
+
+    "quality_required": true,
+    "rail_bridges_required": false,
+    "space_travel_required": false,
+    "spoiling_required": false,
+    "freezing_required": false,
+    "segmented_units_required": false,
+    "expansion_shaders_required": false,
+
+    "dependencies": [
+        "base >= 2.0.33",
+        "? quality",
+
+        "? lane-balancers",
+        "? loaders-enabled"
+    ]
+}

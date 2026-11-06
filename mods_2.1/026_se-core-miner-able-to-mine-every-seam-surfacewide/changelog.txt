@@ -1,0 +1,46 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2026. 07. 07
+  Info:
+    - Ported to 2.1
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025. 11. 06
+  Info:
+    - Potentially fix quality swap crash
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025. 10. 17
+  Info:
+    - Fix beacon interface unit number crash on existing worlds
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025. 08. 20
+  Info:
+    - Preserve slider setting through biter attacks
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025. 07. 30
+  Info:
+    - Mod portal release
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2025. 07. 30
+  Info:
+    - Figure out the secret sauce
+    - Show planet, fragment name & rate in relative gui
+    - Horizontal line
+    - Redesign the gui
+    - Tweak the new gui
+    - Require beacon interface and hook up the slider
+    - Add remote interface to get the total core miners for this surface
+    - Allocate newly placed core miners
+    - Clamp slider output to actually available seams
+    - Set the mining amount and keep it steady
+    - Cleanup after miner removal
+    - Delete the efficiency placement texts during placement
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2025. 07. 29
+  Info:
+    - Initial commit

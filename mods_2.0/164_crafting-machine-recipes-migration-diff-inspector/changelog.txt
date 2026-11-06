@@ -1,0 +1,27 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: ????
+  Info:
+    - Stash whatever this draft was
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2026. 03. 03
+  Info:
+    - Add categories to the tooltip of removed recipes
+    - List the crafting categories in the crafting machine tooltip
+    - And for added recipes as well
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2026. 03. 03
+  Info:
+    - Mod portal release
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2026. 03. 03
+  Info:
+    - Precompute the recipe list instead
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2026. 03. 03
+  Info:
+    - Initial commit

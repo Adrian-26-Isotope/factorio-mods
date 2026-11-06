@@ -1,0 +1,84 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2026. 07. 03
+  Info:
+    - Ported to 2.1
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+Date: 2024. 12. 17
+  Info:
+    - Make the colors configurable for colorblind people
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+Date: 2024. 11. 18
+  Info:
+    - Fix some pumpjack targets keeping their dot when no longer holding a drill
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 2024. 11. 15
+  Info:
+    - Suggest the presence of newsletter-for-mods-made-by-quezler
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 2024. 11. 14
+  Info:
+    - Require the presence of newsletter-for-mods-made-by-quezler
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2024. 11. 11
+  Info:
+    - Fix crash when changing surface while holding a drill
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2024. 11. 09
+  Info:
+    - Support holding a blueprint containing drills
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2024. 11. 01
+  Info:
+    - Also draw without alt-mode, but smaller
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2024. 10. 28
+  Info:
+    - Replace sprites with colored squares
+    - Replace squares with dots (more consistent on various zoom levels)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2024. 10. 27
+  Info:
+    - Recolor render objects only if new chunks got scanned
+    - Redraw when a drill gets built
+    - Redraw immediately when a new drill gets built
+    - Remove render objects when a drill gets removed
+    - Purge caches completely when a drill gets removed
+    - Cache which tile positions a drill touches
+    - Cleanup 〃
+    - Support ghost drills
+    - Replace old calcite texture with selection boxes
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024. 10. 25
+  Info:
+    - Mod portal release
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2024. 10. 25
+  Info:
+    - Do not check for held item every time the player moves
+    - Track chunks the player has put his character/remote-view on
+    - Check all the chunks on screen
+    - Mark in green, yellow & red what is covered, in & out of range
+    - Always draw ores, not only when caching them
+    - Only chance the color when updating an ore
+    - Simplify the last two commits
+    - Replace the white square by a tintable ore texture
+    - Highlight ores when initially holding a drill
+    - Fix some ores erroneously being marked as red
+    - Fix overshooting the bottom right
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2024. 10. 25
+  Info:
+    - Initial commit

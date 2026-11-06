@@ -1,0 +1,58 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 2026. 07. 06
+  Info:
+    - Ported to 2.1
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2026. 01. 25
+  Info:
+    - Add a poor explanation on how to use export once you have it
+    - Add compatibility with Space Exploration
+    - Make the search radius configurable
+    - Differentiate entities with some color puke
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025. 05. 28
+  Info:
+    - Add startup settings for hiding the yellow base
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025. 05. 01
+  Info:
+    - Bump readme
+    - A fix for the fix
+    - Detect any collision box within a 3 tile range
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025. 04. 30
+  Info:
+    - Mod portal release
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2025. 04. 30
+  Info:
+    - Setup the furnace prototype
+    - Generate icons for each variation
+    - Fix scale of poles in the generated icons
+    - Make the icons 64x64
+    - Avoid 16 color channels
+    - Fix furnace prototype typos
+    - Make them blueprintable
+    - Make the furnace rotatable
+    - Cycle between the circuit connectors by rotating
+    - Allow nudging with the arrow keys
+    - Nudge further with shift held down
+    - Comment on usage and non-centered circuit connectors
+    - Place an anchor so blueprints render the connector
+    - Generate the blueprint book in a command
+    - Render the circuit connector above entities
+    - Open a gui with the template for all nearby entities
+    - Keep the blueprint book
+    - Format the by_pixel offset
+    - Deathrattle them together
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2025. 04. 30
+  Info:
+    - Initial commit

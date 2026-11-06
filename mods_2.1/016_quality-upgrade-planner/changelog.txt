@@ -1,0 +1,186 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.8.1
+Date: 2026. 07. 03
+  Info:
+    - Fix logistic storage container ghost crash
+---------------------------------------------------------------------------------------------------
+Version: 2.8.0
+Date: 2026. 07. 03
+  Info:
+    - Ported to 2.1
+---------------------------------------------------------------------------------------------------
+Version: 2.7.0
+Date: 2025. 07. 21
+  Info:
+    - Merged combinator input/output and quality toggle support by robot256
+---------------------------------------------------------------------------------------------------
+Version: 2.6.4
+Date: 2025. 07. 07
+  Info:
+    - Fix the recipes mode being broken as of 2 updates ago
+---------------------------------------------------------------------------------------------------
+Version: 2.6.3
+Date: 2025. 07. 06
+  Info:
+    - Function order shenanigans
+---------------------------------------------------------------------------------------------------
+Version: 2.6.2
+Date: 2025. 07. 05
+  Info:
+    - Teoretically support ghost entities
+---------------------------------------------------------------------------------------------------
+Version: 2.6.1
+Date: 2025. 02. 21
+  Info:
+    - Process entity upgrades last, and default to no modes
+---------------------------------------------------------------------------------------------------
+Version: 2.6.0
+Date: 2025. 02. 06
+  Info:
+    - Support updating storage chest filters
+---------------------------------------------------------------------------------------------------
+Version: 2.5.2
+Date: 2025. 02. 05
+  Info:
+    - Hide from factoriopedia and recycling
+---------------------------------------------------------------------------------------------------
+Version: 2.5.1
+Date: 2025. 01. 27
+  Info:
+    - Remember the last quality you used
+    - If the playerdata is fresh, open gui on first use
+    - Disable all other switches if you hold shift
+    - Make shift click move them all to the new side
+    - Thumbnail rework attempt one
+    - Thumbnail rework attempt two
+    - Make the dice look cursed
+    - Update readme
+---------------------------------------------------------------------------------------------------
+Version: 2.5.0
+Date: 2025. 01. 27
+  Info:
+    - Update requests & constants description
+    - Mark lane balancers and loaders enabled as supported
+    - Support circuit and logistic conditions
+    - Check for generic on off control behaviour with pcall
+---------------------------------------------------------------------------------------------------
+Version: 2.4.0
+Date: 2025. 01. 27
+  Info:
+    - Support requester chests
+    - Handle requesters and combinators in their respective modes
+    - Support space platforms and landing pads
+    - Prevent duplicate filter crashes
+    - Remove duplicate filters (so they do not keep their old quality)
+    - Ignore non-manual and named groups
+---------------------------------------------------------------------------------------------------
+Version: 2.3.0
+Date: 2025. 01. 27
+  Info:
+    - Support recipes
+---------------------------------------------------------------------------------------------------
+Version: 2.2.0
+Date: 2025. 01. 27
+  Info:
+    - Support inserter/loader/splitter filters
+---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 2025. 01. 27
+  Info:
+    - Remove remnants of itemdata
+    - Make the shortcut able to close the gui again
+    - Have reverse select toggle the gui as well
+    - Stop using greyscaled "quality category" sprites
+    - Store switch states in playerdata
+    - Move modes to their own lua file
+    - Support modules
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2025. 01. 27
+  Info:
+    - Attempt to design a custom planner icon
+    - Attempt to set the shortcut description
+    - Add bootleg shortcut description due to https://forums.factorio.com/126363
+    - Embed normal quality indicator inside icon
+    - Label the selection tool with the quality's name
+    - Label the spawned one as normal immediately
+    - Just use a grey upgrade planner as the icon
+    - Experiment with tinted selection tools per quality
+    - Just stick with one selection tool prototype
+    - Uppercase the first char of the quality name (translating is tedious)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2025. 01. 26
+  Info:
+    - Begin selection tool conversion
+    - Add shortcut button (resolves #20)
+    - Test changing quality with scrolling
+    - Reordering
+    - Generate greyscale quality category icons
+    - Swap beacon icon with module icon
+    - Rename inserters to filters (since it includes loaders and splitters too)
+    - Decrease generator line width
+    - Create initial gui frame
+    - Load the quality categories as buttons
+    - Give the quality category buttons a label
+    - Localize the quality category names
+    - Give the quality categories a description
+    - Give each quality category a switch button
+    - Add an inner frame for looks
+    - Cleanup 1.0.1 - 1.0.8 inventories better
+    - Disable the switch for everything but the entities
+    - Define default switch states
+    - Attempt to store itemdata within each quality upgrade planner
+    - Abandon itemdata due to https://forums.factorio.com/126350
+    - Open gui by clicking the shortcut again instead
+    - Use alt+scroll (vs shift+scroll) to set the quality instead
+    - Support upgrading entities like 1.0.x could
+    - Begin supporting ghosts (eww, create_entity, lets not)
+    - Support upgrading ghosts properly
+    - Allow using the quality upgrade planner in remote view
+    - Prevent "index out of bounds" by only mapping once per entity name
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+Date: 2024. 12. 12
+  Info:
+    - Surpress ` is not a valid upgrade source entity.` messages
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 2024. 11. 15
+  Info:
+    - Suggest the presence of newsletter-for-mods-made-by-quezler
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 2024. 11. 14
+  Info:
+    - Require the presence of newsletter-for-mods-made-by-quezler
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2024. 11. 05
+  Info:
+    - Hide the book from the production signal picker tab
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2024. 10. 30
+  Info:
+    - Fix typo making it loadable in 1.0.12
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2024. 10. 30
+  Info:
+    - Color the quality names in their quality color
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2024. 10. 30
+  Info:
+    - Hide from factoriopedia
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2024. 10. 28
+  Info:
+    - Cache the item and update the thumbnail
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024. 10. 25
+  Info:
+    - Mod portal release
